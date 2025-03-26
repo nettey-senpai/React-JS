@@ -16,12 +16,14 @@ const ProductList = () => {
       price: "$199",
     },
   ];
+
+
   return (
     <div>
       {products.map((product) => (
-        <div key={id}>
-          <li>{name}</li>
-          <li>{price}</li>
+        <div key={product.id}>
+          <h1>Name: {product.name}</h1>
+          <h1>Price: {product.price}</h1>
         </div>
       ))}
     </div>
