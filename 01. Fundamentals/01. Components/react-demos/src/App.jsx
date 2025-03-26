@@ -1,23 +1,15 @@
-const Cart = () => {
-  const items = ["Airpods", "Power Bank", "SSD", "Hoddie"];
-
-  return (
-    <div>
-      <h1>Cart</h1>
-      {items.length > 0 && <h2>You have {items.length} items in your cart</h2>}
-
-      <ul>
-        <h4>Products</h4>
-        {items.map(item => (
-          <li key={Math.random()}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+import Greeting from "./components/Greeting";
+import UserStatus from "./components/UserStatus";
+import Weather from "./components/Weather";
 
 const App = () => {
-  return <Cart />;
+  return (
+    <div>
+      <Weather />
+      <UserStatus loggedIn={true} isAdmin={false} />
+      <Greeting timeOfDay="Afternoon" />
+    </div>
+  );
 };
 
 export default App;
