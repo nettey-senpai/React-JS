@@ -1,14 +1,13 @@
-import Greeting from "./components/Greeting";
-import UserStatus from "./components/UserStatus";
-import Weather from "./components/Weather";
+import "./index.css";
+import { FaComputer } from "react-icons/fa6";
+import { FaCartArrowDown } from "react-icons/fa";
 
 const App = () => {
   return (
-    <div>
-      <Weather />
-      <UserStatus loggedIn={true} isAdmin={false} />
-      <Greeting timeOfDay="Afternoon" />
-    </div>
+    <section>
+      <FaCartArrowDown />
+      <FaComputer />
+    </section>
   );
 };
 
