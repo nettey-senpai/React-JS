@@ -1,12 +1,15 @@
-import Person from "./components/Person";
-import Product from "./components/Product";
+const ValidPassword = () => <h1>Valid Password</h1>;
+const InvalidPassword = () => <h1>Invalid Password</h1>;
+
+const Password = ({ isValid }) => {
+  return isValid ? <ValidPassword /> : <InvalidPassword />;
+};
 
 const App = () => {
   return (
-    <div>
-      <Person name="Jeff" age={25} />
-      <Product name="Banana" price="$5" />
-    </div>
+    <section>
+      <Password isValid={true} />
+    </section>
   );
 };
 
