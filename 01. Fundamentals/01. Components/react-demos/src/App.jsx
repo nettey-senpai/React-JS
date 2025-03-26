@@ -1,22 +1,12 @@
+import Person from "./components/Person";
+import Product from "./components/Product";
+
 const App = () => {
   return (
-    <User
-      name="Jeff"
-      age={25}
-      isMarried={false}
-      hobbies={["Coding", "Music", "Sleeping"]}
-    />
-  );
-};
-
-const User = ({ name, age, isMarried, hobbies }) => {
-  return (
-    <section>
-      <h1>Name: {name}</h1>
-      <h2>Age: {age}</h2>
-      <h3>Is Married: {isMarried}</h3>
-      <h4>Hobbies: {hobbies[0]}</h4>
-    </section>
+    <div>
+      <Person name="Jeff" age={25} />
+      <Product name="Banana" price="$5" />
+    </div>
   );
 };
 
