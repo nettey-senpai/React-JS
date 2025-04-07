@@ -1,40 +1,16 @@
-const Move = () => {
-  const moveHandler = () => {
-    alert("Mouse move event fired");
-    console.log("Mouse move event fired");
-  };
-  return (
-    <p onMouseMove={moveHandler}>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, deleniti
-      esse ducimus nobis dolorem itaque eum suscipit. Quibusdam, beatae.
-      Consequuntur?
-    </p>
-  );
-};
-
-const Copy = () => {
-  const copyHandler = () => console.log("Stop copying my shi");
-
-  return (
-    <p onCopy={copyHandler}>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate,
-      repellendus! Soluta natus laudantium rerum quos nulla labore. Quas,
-      adipisci eligendi!
-    </p>
-  );
-};
-
-const Button = () => {
-  const handleClick = () => console.log(Math.round(Math.random() * 10));
-  return <button onClick={handleClick}>Click</button>;
-};
+import { useState } from "react";
 
 const App = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+
   return (
     <section>
-      <Button />
-      <Copy />
-      <Move />
+      <h1>{count}</h1>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
     </section>
   );
 };
